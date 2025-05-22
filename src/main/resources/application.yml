@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: shopping-list
+  datasource:
+    url: jdbc:mysql://localhost:3306/shopping_list?createDatabaseIfNotExist=true
+    username: root
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
