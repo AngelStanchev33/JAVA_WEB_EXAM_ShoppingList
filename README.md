@@ -14,6 +14,9 @@ A Spring Boot web application for managing shopping lists. This application allo
   - Add products to lists
   - Track product details (name, description, price, needed before date)
   - View and manage shopping lists
+  - Add products to cart
+  - Buy individual products
+  - Buy all products at once
 
 ## Technical Stack
 
@@ -61,4 +64,14 @@ The application implements Spring Security for:
 - User authentication
 - Session management
 - Role-based access control
-- Password encryption using BCrypt 
+- Password encryption using BCrypt
+
+## Product Management
+
+The application provides comprehensive product management features:
+- Add products to shopping lists
+- View product details
+- Add products to cart
+- Purchase individual products
+- Bulk purchase functionality
+- Track product status (available, in cart, purchased) 
