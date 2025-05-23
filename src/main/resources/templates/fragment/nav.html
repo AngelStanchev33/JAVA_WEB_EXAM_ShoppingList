@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list App</title>
     <link rel="stylesheet" href="/css/reset-css.css" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />     
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
@@ -14,6 +14,8 @@
     <header th:fragment="nav">
         <nav class="navbar navbar-expand-lg bg-nav rounded">
             <a class="nav-link text-white active h5" href="/">Shopping List App</a>
+            <a class="nav-link text-white active h5" href="/products/add" th:if="${!currentUser.isAnonymous}">Add
+                Product</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,6 +27,12 @@
                     </li>
                     <li class="nav-item col-md-4" th:if="${currentUser.isAnonymous}">
                         <a class="nav-link text-white active h5" href="/users/register">Register</a>
+                    </li>
+                    <li class="nav-item col-md-4" th:if="${!currentUser.isAnonymous}">
+                        <form th:action="@{/users/logout}" method="post" style="display: inline;">
+                            <button type="submit" class="nav-link text-white active h5"
+                                style="background: none; border: none; padding: 0;">Logout</button>
+                        </form>
                     </li>
                 </ul>
             </div>

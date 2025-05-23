@@ -100,6 +100,6 @@ public class AuthController {
             redirectAttributes.addFlashAttribute("error", "Invalid username or password");
             return "redirect:/users/login"; 
         }
-        return "redirect:/";
+        return "redirect:/home";
     }
 }
